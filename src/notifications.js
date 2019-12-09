@@ -12,7 +12,7 @@ class Notifications extends React.Component {
     return this.refs.notify;
   }
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     const {notifications} = nextProps;
     const notificationIds = notifications.map(notification => notification.uid);
     const systemNotifications = this.system().state.notifications || [];
